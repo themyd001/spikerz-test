@@ -1,0 +1,30 @@
+ul {
+  list-style: none;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e2e7;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+
+      svg {
+        width: 0.76rem;
+        height: 0.76rem;
+      }
+    }
+  }
+}

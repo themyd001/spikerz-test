@@ -1,0 +1,22 @@
+@use "variables" as *;
+
+.text-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-bottom: 1.5rem;
+
+  h3 {
+    color: $primary-color;
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid #e0e2e7;
+  }
+}

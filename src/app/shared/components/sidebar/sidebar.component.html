@@ -1,0 +1,45 @@
+<nav>
+  <ul>
+    @for (item of MENU_ITEMS; track item.icon) {
+    <li
+      [routerLink]="item.route"
+      [routerLinkActive]="'active'"
+      role="link"
+      aria-current="page"
+    >
+      <svg class="icon">
+        <use [attr.xlink:href]="'assets/icons/menu.svg#' + item.icon"></use>
+      </svg>
+      <p>{{ item.label }}</p>
+    </li>
+    }
+  </ul>
+  <div>
+    <ul>
+      <li role="link" aria-current="page">
+        <svg class="icon">
+          <use [attr.xlink:href]="'assets/icons/menu.svg#cog'"></use>
+        </svg>
+        <p>Lorem</p>
+      </li>
+      <li role="link" aria-current="page">
+        <svg class="icon">
+          <use [attr.xlink:href]="'assets/icons/menu.svg#message'"></use>
+        </svg>
+        <p>Lorem</p>
+      </li>
+    </ul>
+    <div class="footer">
+      <div>
+        <img src="assets/user.png" alt="User Avatar" />
+        <div>
+          <p>Lorem</p>
+          <p>Ipsum</p>
+        </div>
+      </div>
+      <svg>
+        <use [attr.xlink:href]="'assets/icons/menu.svg#logout'"></use>
+      </svg>
+    </div>
+  </div>
+</nav>

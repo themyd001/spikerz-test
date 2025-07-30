@@ -1,0 +1,41 @@
+<div class="app-layout">
+  <div
+    class="app-sidebar"
+    [ngStyle]="{
+      left: sidebarOpened ? '0px' : '-500px'
+    }"
+  >
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="app-content">
+    <div class="app-header">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        (click)="sidebarOpened = !sidebarOpened"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M4 6H20M4 12H20M4 18H20"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </g>
+      </svg>
+    </div>
+    @if(sidebarOpened){
+    <div class="backdrop" (click)="sidebarOpened = false"></div>
+    }
+
+    <router-outlet></router-outlet>
+  </div>
+</div>

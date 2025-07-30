@@ -1,0 +1,41 @@
+<h4>Lorem ipsum dolor sit</h4>
+<div class="remediations-box">
+  @for (remediation of remediations(); track $index) {
+  <ng-content
+    *ngTemplateOutlet="
+      remediationContent;
+      context: { $implicit: remediation, isOpen: false }
+    "
+  ></ng-content>
+  }
+</div>
+
+<ng-template #remediationContent let-remediation>
+  <div class="remediation-content">
+    <h5>{{ remediation.title }}</h5>
+    <div
+      class="remediation-content-header"
+      (click)="remediation.isOpen = !remediation.isOpen"
+    >
+      <div class="remediation-content-header-item">
+        <div class="remediation-content-header-server-icon">
+          <svg class="icon">
+            <use xlink:href="assets/icons/menu.svg#server2"></use>
+          </svg>
+        </div>
+        <div class="remediation-content-header-server-details">
+          <p>{{ remediation.serverName }}</p>
+          <span>{{ remediation.serverIp }}</span>
+        </div>
+      </div>
+      <p class="remediation-content-header-brief">
+        {{ remediation.content }}
+      </p>
+    </div>
+    @if (remediation.isOpen) {
+    <p class="remediation-content-description">
+      {{ remediation.extra }}
+    </p>
+    }
+  </div>
+</ng-template>

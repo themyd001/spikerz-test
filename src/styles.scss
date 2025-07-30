@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@use "variables" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 15px;
+  background-color: $background-color;
+  color: $foreground-color;
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

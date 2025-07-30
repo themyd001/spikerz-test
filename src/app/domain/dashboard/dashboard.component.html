@@ -1,0 +1,20 @@
+<div class="page-content">
+  <section>
+    <div>
+      <app-text-info [textInformations]="TEXT_INFORMATIONS" />
+      <app-list-info [listInformations]="LIST_INFORMATIONS" />
+      <app-remediations [remediations]="REMEDIATIONS" />
+    </div>
+  </section>
+  <section>
+    <div>
+      <h3>Lorem Lorem Lorem</h3>
+      <app-vulnerability-diagram />
+      <h3>Lorem ipsum dolor sit</h3>
+      <div class="vulnerability-section">
+        <app-vulnerability-table [assetsWithRisks]="ASSETS_WITH_RISK" />
+        <app-vulnerability-graph [assetsWithRisks]="ASSETS_WITH_RISK" />
+      </div>
+    </div>
+  </section>
+</div>

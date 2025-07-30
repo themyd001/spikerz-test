@@ -1,0 +1,17 @@
+<ul>
+  @for (information of listInformations(); track $index) {
+  <li>
+    <h4>{{ information.label }}</h4>
+    <div>
+      @if(information.icon){
+      <svg class="icon" [style.color]="information.icon.color">
+        <use
+          [attr.xlink:href]="'assets/icons/menu.svg#' + information.icon.name"
+        ></use>
+      </svg>
+      }
+      <p>{{ information.value }}</p>
+    </div>
+  </li>
+  }
+</ul>
