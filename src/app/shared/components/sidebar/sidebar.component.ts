@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MENU_ITEMS } from '@shared/constants';
 
@@ -6,8 +6,14 @@ import { MENU_ITEMS } from '@shared/constants';
   selector: 'app-sidebar',
   imports: [RouterModule],
   templateUrl: './sidebar.component.html',
+  host: {
+    style: 'position: relative',
+  },
   styleUrl: './sidebar.component.scss',
 })
 export class SidebarComponent {
   MENU_ITEMS = MENU_ITEMS;
+
+  @Input() iconOnly!: boolean;
+  @Output() iconOnlyChange = new EventEmitter<boolean>();
 }

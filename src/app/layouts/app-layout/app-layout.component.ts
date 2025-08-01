@@ -10,5 +10,6 @@ import { NgStyle } from '@angular/common';
   styleUrl: './app-layout.component.scss',
 })
 export class AppLayoutComponent {
-  sidebarOpened = true;
+  sidebarOpened = false;
+  iconOnly = true;
 }

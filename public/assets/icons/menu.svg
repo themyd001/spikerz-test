@@ -58,5 +58,8 @@
   <symbol viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" id="server2">
   <path d="M6.27252 6.32776H6.28346M6.27252 19.4528H6.28346M4.08502 1.95276H21.585C22.7931 1.95276 23.7725 2.93214 23.7725 4.14026V8.51526C23.7725 9.72338 22.7931 10.7028 21.585 10.7028H4.08502C2.8769 10.7028 1.89752 9.72338 1.89752 8.51526V4.14026C1.89752 2.93214 2.8769 1.95276 4.08502 1.95276ZM4.08502 15.0778H21.585C22.7931 15.0778 23.7725 16.0571 23.7725 17.2653V21.6403C23.7725 22.8484 22.7931 23.8278 21.585 23.8278H4.08502C2.8769 23.8278 1.89752 22.8484 1.89752 21.6403V17.2653C1.89752 16.0571 2.8769 15.0778 4.08502 15.0778Z" stroke="currentColor" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
+  <symbol viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" id="left-angle">
+  <path d="M6.4 12.4L1 6.99998L6.4 1.59998" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
 
 </svg>

@@ -1,5 +1,6 @@
-<nav>
+<nav [class.icon-only]="iconOnly">
   <ul>
+    <img src="assets/logo.png" class="icon-logo" />
     @for (item of MENU_ITEMS; track item.icon) {
     <li
       [routerLink]="item.route"
@@ -43,3 +44,13 @@
     </div>
   </div>
 </nav>
+
+<div
+  class="minimizer"
+  [class.icon-only]="iconOnly"
+  (click)="iconOnlyChange.emit(!iconOnly)"
+>
+  <svg>
+    <use [attr.xlink:href]="'assets/icons/menu.svg#left-angle'"></use>
+  </svg>
+</div>

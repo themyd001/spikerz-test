@@ -24,6 +24,9 @@ import {
     VulnerabilityGraphComponent,
     VulnerabilityTableComponent,
   ],
+  host: {
+    class: 'page-content',
+  },
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })

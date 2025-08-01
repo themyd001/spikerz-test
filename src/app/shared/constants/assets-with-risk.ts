@@ -9,4 +9,9 @@ export const ASSETS_WITH_RISK = [
     ip: '192.168.1.2',
     contextualRisk: 'Critical',
   },
+  {
+    name: 'Loremipsumdolorsit003',
+    ip: '192.168.1.4',
+    contextualRisk: 'Critical',
+  },
 ] as const;

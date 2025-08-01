@@ -2,10 +2,11 @@
   <div
     class="app-sidebar"
     [ngStyle]="{
-      left: sidebarOpened ? '0px' : '-500px'
+      left: sidebarOpened ? '0px' : '-500px',
+      width: iconOnly ? '80px' : '250px'
     }"
   >
-    <app-sidebar></app-sidebar>
+    <app-sidebar [(iconOnly)]="iconOnly"></app-sidebar>
   </div>
   <div class="app-content">
     <div class="app-header">

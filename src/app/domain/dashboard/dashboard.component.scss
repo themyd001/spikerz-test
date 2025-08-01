@@ -1,58 +1,61 @@
 @use "variables" as *;
 
-.page-content {
+h3 {
+  color: $primary-color;
+  font-size: 1.25rem;
+}
+
+section {
+  max-height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  @include respond(xl) {
+    overflow-y: unset;
+  }
+
+  div:first-child {
+    background-color: #fff;
+    padding: 1.25rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+
+    @include respond(xl) {
+      padding: 0.5rem;
+    }
+  }
+}
+
+.vulnerability-section {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  column-gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 
-  @include respond(md) {
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: 0rem;
-    row-gap: 1.5rem;
+  @include respond(xl) {
+    grid-template-columns: 1fr;
   }
+}
 
-  h3 {
-    color: $primary-color;
-    font-size: 1.25rem;
+section:first-of-type {
+  grid-column: span 2;
+
+  @include respond(xl) {
+    grid-columns: span 1;
+    height: auto;
   }
+}
 
-  section {
-    div:first-child {
-      background-color: #fff;
-      padding: 1.25rem 2rem;
-      border-radius: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      width: 100%;
-
-      @include respond(xl) {
-        padding: 0.5rem;
-      }
-    }
-  }
-
-  .vulnerability-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-
-    @include respond(xl) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  section:first-of-type {
-    grid-column: span 2;
-    @include respond(xl) {
-      grid-columns: span 1;
-    }
-  }
-
-  section:last-of-type {
-    grid-column: span 3;
-    @include respond(xl) {
-      grid-columns: span 1;
-    }
+section:last-of-type {
+  grid-column: span 3;
+  @include respond(xl) {
+    grid-columns: span 1;
   }
 }
